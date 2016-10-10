@@ -60,9 +60,9 @@ class GuestsController extends BaseController
     {
         $this->validateRequest($request);
 
-        return $this->guest->create(
+        return response($this->guest->create(
             $request->all()
-        );
+        ), 201);
     }
 
     /**
